@@ -311,8 +311,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .eyebrow::before { flex-shrink: 0; }
 .hero-aside p { text-align: left; max-width: 440px; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
-.arrow-link, .resume-link { padding: 12px 16px; border: 1px solid var(--line); border-radius: 12px; min-height: 52px; margin: 0; background: var(--paper); }
+.arrow-link, .resume-link, .catalog-link { padding: 12px 16px; border: 1px solid var(--line); border-radius: 12px; min-height: 52px; margin: 0; background: var(--paper); }
 .arrow-link { border-color: var(--blue); }
+.catalog-link { display: inline-flex; align-items: center; color: var(--paper); background: var(--ink); font-size: .86rem; font-weight: 800; transition: opacity .2s ease, transform .2s ease; }
+.catalog-link:hover { opacity: .82; transform: translateY(-2px); }
 .resume-link::before { content: none; }
 .repository-link { color: var(--blue); font-size: .85rem; font-weight: 700; padding-block: 12px; }
 .project-help { color: var(--muted); line-height: 1.6; font-size: .9rem; margin: 0 0 22px; }
