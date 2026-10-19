@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo — Vitor Roberto Silvério Martins</title>
+    <style>
+        :root { --ink: #14202b; --muted: #52616d; --accent: #155bff; --line: #dbe5ea; --paper: #ffffff; }
+        * { box-sizing: border-box; }
+        body { margin: 0; color: var(--ink); background: #eef5f7; font: 15px/1.6 Arial, sans-serif; }
+        main { width: min(850px, calc(100% - 40px)); margin: 40px auto; padding: 56px 64px; background: var(--paper); box-shadow: 0 18px 50px rgba(20, 32, 43, .12); }
+        header { padding-bottom: 28px; border-bottom: 3px solid var(--accent); }
+        h1 { margin: 0; font-size: 2.7rem; letter-spacing: -.06em; }
+        h2 { margin: 30px 0 8px; color: var(--accent); font-size: .82rem; letter-spacing: .12em; text-transform: uppercase; }
+        p { margin: 0; }
+        .role { margin-top: 4px; color: var(--muted); font-size: 1.05rem; }
+        .contact { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 18px; color: var(--muted); font-size: .86rem; }
+        a { color: inherit; }
+        .intro { margin-top: 25px; }
+        .skills { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 30px; }
+        .skill strong { display: block; margin-bottom: 3px; }
+        ul { margin: 8px 0 0; padding-left: 20px; }
+        .note { margin-top: 34px; padding-top: 15px; color: var(--muted); border-top: 1px solid var(--line); font-size: .82rem; }
+         .resume-toolbar { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; width: min(850px, calc(100% - 40px)); margin: 24px auto; }
+        .resume-toolbar button { padding: 12px 18px; border: 0; border-radius: 8px; color: white; background: var(--accent); font: inherit; cursor: pointer; }
+        @media print { .resume-toolbar { display: none; } body { background: white; } main { width: 100%; margin: 0; padding: 25px; box-shadow: none; } }
+        @media (max-width: 600px) { main { margin: 20px auto; padding: 32px 25px; } h1 { font-size: 2.2rem; } .skills { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <nav class="resume-toolbar" aria-label="Ações do currículo"><a href="index.html">← Voltar ao portfólio</a><button type="button" onclick="window.print()">Imprimir / salvar em PDF</button></nav>
+    <main>
+        <header>
+            <h1>Vitor Roberto Silvério Martins</h1>
+            <p class="role">Desenvolvedor Full Stack Júnior · Estudante de Engenharia da Computação</p>
+            <div class="contact">
+                <span>Espinheiro, Recife-PE</span>
+                <a href="tel:+5581992710955">(81) 9 9271-0955</a>
+                <a href="mailto:vitorrsilveriomartins@gmail.com">vitorrsilveriomartins@gmail.com</a>
+                <a href="https://github.com/VitorMartinsRS">GitHub</a>
+                <a href="https://www.linkedin.com/in/vitormartinsrs">LinkedIn</a>
+            </div>
+        </header>
+        <section class="intro">
+            <h2>Resumo profissional</h2>
+            <p>Estudante de Engenharia da Computação (6º período) na Uninassau e Desenvolvedor Full Stack Júnior, com experiência prática em Java, Python, React, Angular, JavaScript e TypeScript. Integrante da Liga Acadêmica de Segurança da Informação e Cibersegurança (LaSic) e da comunidade Recife Front-End (REFC), atuando como desenvolvedor do Verifica+, plataforma dedicada ao combate à desinformação. Atualmente aprofundo meus estudos em linguagens de baixo nível, como C e C++, para ampliar minha base técnica em desenvolvimento de software.</p>
+        </section>
+        <section>
+            <h2>Habilidades técnicas</h2>
+            <div class="skills">
+                <div class="skill"><strong>Linguagens</strong><span>Java, Python, JavaScript, TypeScript, C, C++ e C#</span></div>
+                <div class="skill"><strong>Front-end</strong><span>React.js, Angular, HTML5, CSS3 e interfaces responsivas</span></div>
+                <div class="skill"><strong>Back-end</strong><span>Spring Boot, APIs RESTful, arquitetura de aplicações e integração de serviços</span></div>
+                <div class="skill"><strong>Banco de dados</strong><span>MySQL, MariaDB, MongoDB, SQL, modelagem de dados e conceitos NoSQL</span></div>
+                <div class="skill"><strong>Sistemas e infraestrutura</strong><span>Linux (Kali Linux), redes de computadores, configuração e manutenção de hardware</span></div>
+                <div class="skill"><strong>Ferramentas</strong><span>Git, GitHub, Unity, Microsoft Office e Canva</span></div>
+                <div class="skill"><strong>Conceitos</strong><span>POO, estruturas de dados, APIs, integração front-end/back-end e fundamentos de engenharia de software</span></div>
+            </div>
+        </section>
+        <section>
+            <h2>Experiência e projetos</h2>
+            <ul>
+                <li><strong>Projeto Verifica+ — Desenvolvedor:</strong> desenvolvimento de plataforma web voltada ao combate à desinformação, com front-end, integração de frameworks e consumo de APIs.</li>
+                <li>Colaboração no projeto de extensão “No fluxo da informação: Da Fake News à consciência digital”, aplicado na escola EREM Jornalista Trajano Chacon.</li>
+                <li><strong>Projeto de Tecnologia Social — AACA:</strong> desenvolvimento de solução tecnológica para crianças atendidas pela Associação de Apoio a Crianças e Adolescentes, com foco em acessibilidade e aprendizado.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Formação acadêmica</h2>
+            <ul>
+                <li>Engenharia da Computação — Uninassau (cursando, 6º período)</li>
+                <li>Ensino Médio Completo</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Atividades complementares</h2>
+            <ul>
+                <li>Liga Acadêmica de Segurança da Informação e Cibersegurança (LaSic)</li>
+                <li>Comunidade Recife Front-End (REFC)</li>
+                <li>Formação complementar em desenvolvimento web, programação, banco de dados, redes e Linux</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Idiomas</h2>
+            <p>Inglês — Básico (A2)</p>
+        </section>
+        <p class="note">Currículo atualizado em 2026.</p>
+    </main>
+</body>
+</html>

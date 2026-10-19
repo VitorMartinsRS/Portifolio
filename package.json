@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "typescript": "7.0.2"
+  },
+  "name": "portfolio-vitor-martins",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.json --noEmit"
+  }
+}
