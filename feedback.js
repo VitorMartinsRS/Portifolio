@@ -44,7 +44,7 @@
         return;
       }
       form.reset();
-      status.textContent = 'Obrigado! Seu feedback foi enviado ao Vitor.';
+      status.textContent = 'Obrigado! Seu feedback foi enviado.';
     } catch (error) {
       status.textContent = error.name === 'AbortError'
         ? 'A conexão demorou e não foi possível confirmar o envio. Aguarde antes de tentar novamente.'
