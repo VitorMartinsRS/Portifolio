@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Feedbacks · Vitor</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,sans-serif;background:#10141c;color:#edf2fa}*{box-sizing:border-box}body{margin:0}main{max-width:920px;margin:auto;padding:48px 20px}header,.actions{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}h1{font-size:clamp(28px,5vw,42px);margin:10px 0}h2{margin-top:0}p{line-height:1.6;color:#b4bfd0}.tag{color:#8fdcc4;font-size:12px;letter-spacing:2px;text-transform:uppercase}.card{background:#191f2b;border:1px solid #303a4d;border-radius:18px;padding:24px;margin-top:24px}#login{max-width:440px;margin:40px auto}label{display:block;margin:18px 0 8px;font-weight:600}input,textarea,button{font:inherit}input,textarea{width:100%;background:#10141c;color:inherit;border:1px solid #48556d;border-radius:9px;padding:12px}textarea{min-height:150px;resize:vertical}button{border:1px solid #48556d;border-radius:9px;padding:11px 16px;background:#263247;color:inherit;cursor:pointer}button.primary{background:#95e4c8;color:#10251e;border-color:#95e4c8;font-weight:700}button.danger{color:#ffb1b1}button:disabled{opacity:.5;cursor:wait}:focus-visible{outline:3px solid #95e4c8;outline-offset:3px}#login button{width:100%;margin-top:20px}#status{min-height:26px;white-space:pre-wrap}#status.error{color:#ffb1b1}#list article p{white-space:pre-wrap;overflow-wrap:anywhere;color:#edf2fa}time{font-size:13px;color:#b4bfd0}dialog{width:min(540px,92vw);border:1px solid #48556d;background:#191f2b;color:#edf2fa;border-radius:18px;padding:26px}dialog::backdrop{background:#000b}[hidden]{display:none!important}.muted{font-size:14px}.actions{justify-content:flex-start;margin-top:18px}
+/* Identidade visual do portfólio: azul profundo, grade e acentos luminosos. */
+:root{background:#071620;color:#e7f6ff;font-family:Arial,Helvetica,sans-serif}
+body{min-height:100vh;background-image:linear-gradient(#8caee909 1px,transparent 1px),linear-gradient(90deg,#8caee909 1px,transparent 1px);background-size:48px 48px;isolation:isolate}
+body::before,body::after{content:"";position:fixed;z-index:-1;pointer-events:none;width:170px;height:170px;border:1px solid #28cdd96b;transform:rotate(-16deg);top:23%;left:-95px;box-shadow:0 0 24px #22c9d93b,inset 0 0 24px #22c9d924}
+body::after{left:auto;right:-105px;top:48%;transform:rotate(44deg);border-color:#8ca7fb80;box-shadow:0 0 30px #8ca7fb40,inset 0 0 24px #8ca7fb24}
+main{max-width:1180px;padding:0 28px 40px}.site-nav{min-height:100px;border-bottom:1px solid #30424f;display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:66px}.brand{font-size:21px;font-weight:800;letter-spacing:-1px;color:#e7f6ff;text-decoration:none}.back{font-size:13px;color:#9cafca;text-decoration:none;border:1px solid #30424f;border-radius:30px;padding:12px 18px}.back:hover{color:#e7f6ff;border-color:#8ca7fb}h1{font-size:clamp(40px,7vw,78px);line-height:1.02;letter-spacing:-3px;font-weight:800;max-width:760px;margin:20px 0}h1 span{color:#8ca7fb}h2{letter-spacing:-.6px}.tag{font-family:monospace;color:#91a9ed;font-size:11px;letter-spacing:1.2px}.tag::before{content:"";display:inline-block;width:7px;height:7px;background:#ff806d;border-radius:50%;margin-right:10px;box-shadow:0 0 10px #ff806d66}p{color:#9cabb6}.card{background:#081923ed;border:1px solid #2c404f;border-radius:22px;padding:30px;box-shadow:0 18px 50px #0000001a}#login{max-width:460px;margin:32px auto 64px}#login h2{font-size:28px}label{font-size:13px}input,textarea{background:#071620;border-color:#304758;border-radius:11px;padding:14px}button{background:transparent;border-color:#344c5e;border-radius:12px;font-size:14px;font-weight:600;padding:13px 18px;transition:background .15s,border-color .15s}button:hover:enabled{border-color:#8ca7fb;background:#8ca7fb12}button.primary{background:#8ca7fb;color:#071620;border-color:#8ca7fb}button.primary:hover:enabled{background:#a5bbff}button.danger{color:#ffaaa1}:focus-visible{outline-color:#8ca7fb}#status{font-size:14px}dialog{background:#081923;border-color:#344c5e}#panel{margin-top:42px}footer{border-top:1px solid #30424f;margin-top:70px;padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:#9cabb6;font-family:monospace;font-size:11px;letter-spacing:1px}
+@media(max-width:600px){main{padding:0 20px 28px}.site-nav{min-height:82px;margin-bottom:44px}h1{letter-spacing:-2px}.card{padding:22px}.back{font-size:12px;padding:10px 12px}}
+</style>
+</head>
+<body>
+<main>
+<nav class="site-nav" aria-label="Navegação"><a class="brand" href="./index.html">Vitor Martins.</a><a class="back" href="./index.html">Voltar ao portfólio ↗</a></nav>
+<header><div><span class="tag">Portfólio Vitor · Administração</span><h1>Ideias que<br>geram <span>evolução.</span></h1></div><button id="logout" hidden>Sair da conta</button></header>
+<p>Um espaço para acompanhar o que as pessoas estão dizendo sobre seu portfólio.</p>
+<p id="status" role="status" aria-live="polite">Iniciando conexão…</p>
+<section id="login" class="card" hidden>
+<h2>Entrar</h2><p>Use a conta criada em Authentication no Supabase.</p>
+<form id="loginForm"><label for="email">E-mail</label><input id="email" type="email" autocomplete="username" required><label for="password">Senha</label><input id="password" type="password" autocomplete="current-password" required><button class="primary" id="enter">Acessar feedbacks</button></form>
+</section>
+<section id="panel" hidden><header><h2>Comentários recebidos</h2><button id="refresh">Atualizar</button></header><p class="muted">Os comentários mais recentes aparecem primeiro.</p><div id="list"></div><div class="actions"><button id="previous">Anterior</button><span id="page"></span><button id="next">Próxima</button></div></section>
+<dialog id="editor"><form id="editForm"><h2>Editar feedback</h2><label for="editName">Nome</label><input id="editName" required maxlength="200"><label for="editComment">Comentário</label><textarea id="editComment" required maxlength="10000"></textarea><p id="editError" role="alert"></p><div class="actions"><button class="primary" id="save">Salvar alterações</button><button type="button" id="cancel">Cancelar</button></div></form></dialog>
+<footer><span>© 2026 VITOR MARTINS</span><span>PAINEL DE FEEDBACKS</span></footer>
+</main>
+<!-- Somente a chave pública fica no navegador. As políticas RLS protegem os dados no banco. -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+'use strict';
+const $ = id => document.getElementById(id);
+const ADMIN_ID = 'a2129531-7585-496c-920c-3f1087507e53';
+let db, page = 0, editingId = null, generation = 0;
+const SIZE = 20;
+function status(message, error = false){ $('status').textContent = message; $('status').classList.toggle('error', error); }
+function hidePanel(){generation++;$('panel').hidden=true;$('logout').hidden=true;$('list').replaceChildren();$('editor').close();$('login').hidden=false;}
+async function load(){
+ const request = ++generation;
+ $('refresh').disabled=true;$('previous').disabled=true;$('next').disabled=true;
+ status('Carregando feedbacks…');
+ try {
+  const {data,error,count}=await db.from('feedbacks').select('id,nome,comentario,criado_em',{count:'exact'}).order('criado_em',{ascending:false}).order('id',{ascending:false}).range(page*SIZE,(page+1)*SIZE-1);
+  if(error)throw error;if(request!==generation)return;
+  if(page>0&&!data.length){page--;return await load();}
+  $('list').replaceChildren();
+  for(const row of data){
+   const article=document.createElement('article');article.className='card';
+   const heading=document.createElement('h2');heading.textContent=row.nome;
+   const date=document.createElement('time');date.dateTime=row.criado_em;date.textContent=new Date(row.criado_em).toLocaleString('pt-BR');
+   const body=document.createElement('p');body.textContent=row.comentario;
+   const actions=document.createElement('div');actions.className='actions';
+   const edit=document.createElement('button');edit.textContent='Editar';edit.onclick=()=>{editingId=row.id;$('editName').value=row.nome;$('editComment').value=row.comentario;$('editError').textContent='';$('editor').showModal();};
+   const remove=document.createElement('button');remove.textContent='Excluir';remove.className='danger';remove.onclick=async()=>{
+    if(!confirm('Excluir este feedback permanentemente?'))return;remove.disabled=true;
+    try{const {data,error}=await db.from('feedbacks').delete().eq('id',row.id).select('id');if(error)throw error;if(!data.length)throw new Error('O registro não existe mais ou sua conta não tem permissão.');await load();}catch(e){status('Não foi possível excluir: '+e.message,true);}finally{remove.disabled=false;}
+   };
+   actions.append(edit,remove);article.append(heading,date,body,actions);$('list').append(article);
+  }
+  $('page').textContent='Página '+(page+1);$('previous').disabled=page===0;$('next').disabled=(page+1)*SIZE>=count;
+  status(count ? count+' feedback(s) recebido(s).' : 'Nenhum feedback recebido ainda.');
+ }catch(e){if(request===generation)status('Não foi possível carregar os feedbacks: '+e.message,true);}finally{if(request===generation)$('refresh').disabled=false;}
+}
+async function showUser(user){
+ if(!user){hidePanel();status('Entre para acessar seus feedbacks.');return;}
+ if(user.id!==ADMIN_ID){hidePanel();await db.auth.signOut();status('Esta conta não tem acesso à administração.',true);return;}
+ $('login').hidden=true;$('panel').hidden=false;$('logout').hidden=false;page=0;await load();
+}
+$('loginForm').onsubmit=async e=>{e.preventDefault();$('enter').disabled=true;status('Entrando…');try{const {data,error}=await db.auth.signInWithPassword({email:$('email').value.trim(),password:$('password').value});if(error)throw error;$('password').value='';await showUser(data.user);}catch(e){status('Não foi possível entrar. Confira seu e-mail, sua senha e a conexão. '+e.message,true);}finally{$('enter').disabled=false;}};
+$('logout').onclick=async()=>{hidePanel();const {error}=await db.auth.signOut();status(error?'Falha ao sair: '+error.message:'Você saiu da conta.',!!error);};
+$('refresh').onclick=load;$('previous').onclick=()=>{page--;load();};$('next').onclick=()=>{page++;load();};$('cancel').onclick=()=>$('editor').close();
+$('editForm').onsubmit=async e=>{e.preventDefault();const nome=$('editName').value.trim(),comentario=$('editComment').value.trim();if(!nome||!comentario){$('editError').textContent='Preencha o nome e o comentário.';return;}$('save').disabled=true;try{const {data,error}=await db.from('feedbacks').update({nome,comentario}).eq('id',editingId).select('id');if(error)throw error;if(!data.length)throw new Error('O registro não existe mais ou sua conta não tem permissão.');$('editor').close();await load();}catch(e){$('editError').textContent='Não foi possível salvar: '+e.message;}finally{$('save').disabled=false;}};
+async function init(){
+ try{
+  if(!window.supabase)throw new Error('Não foi possível carregar a biblioteca Supabase. Verifique sua conexão e recarregue a página.');
+  db=window.supabase.createClient('https://queaynljbcfxsicxyssi.supabase.co','sb_publishable_85062lvu2MUtimZtoUYTbQ_FUqoSwWu');
+  db.auth.onAuthStateChange((event)=>{if(event==='SIGNED_OUT'){hidePanel();status('Entre para acessar seus feedbacks.');}});
+  const {data,error}=await db.auth.getUser();
+  if(error&&error.name!=='AuthSessionMissingError')throw error;
+  await showUser(data?.user);
+ }catch(e){status(e.message,true);}
+}
+init();
+</script>
+</body>
+</html>
+
