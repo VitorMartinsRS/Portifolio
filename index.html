@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <title>Vitor Martins — Desenvolvedor</title>
     <link rel="stylesheet" href="style.css?v=5">
+    <link rel="stylesheet" href="feedback.css?v=1">
 </head>
 <body>
     <a class="skip-link" href="#top">Pular para o conteúdo</a>
@@ -49,7 +50,7 @@
             <div class="hero-aside">
                 <p>Desenvolvo aplicações web e soluções que conectam software, eletrônica e sistemas embarcados, transformando problemas reais em tecnologia funcional.</p>
                 <div class="hero-actions"><a class="arrow-link" href="#trabalho">Ver projetos <span>↘</span></a>
-                <a class="resume-link" href="curriculo-vitor-martins.html">Ver currículo ↗</a></div>
+                <a class="resume-link" href="curriculo-vitor-martins.html">Ver currículo ↗</a><button class="feedback-open" type="button" data-open-feedback>Deixar feedback ↗</button></div>
             </div>
         </section>
 
@@ -203,5 +204,23 @@
         <a class="dialog-contact" href="#contato">Conversar sobre este projeto ↗</a>
     </dialog>
     <script src="script.js" defer></script>
+    <dialog id="feedback-dialog" class="feedback-dialog" aria-labelledby="feedback-title" aria-describedby="feedback-intro">
+        <span class="label">Sua opinião faz a diferença</span>
+        <h2 id="feedback-title">Ideias que geram <span>evolução.</span></h2>
+        <p id="feedback-intro" class="feedback-intro">O que você achou do portfólio? Deixe uma sugestão ou comentário. Sua mensagem será visível somente para o Vitor.</p>
+        <form id="feedback-form">
+            <label for="feedback-name">Seu nome</label>
+            <input id="feedback-name" name="nome" autocomplete="name" maxlength="100" required autofocus>
+            <label for="feedback-comment">Seu comentário</label>
+            <textarea id="feedback-comment" name="comentario" maxlength="2000" placeholder="Compartilhe sua opinião…" required></textarea>
+            <p id="feedback-status" class="feedback-status" role="status" aria-live="polite"></p>
+            <div class="feedback-actions">
+                <button id="feedback-submit" type="submit">Enviar feedback ↗</button>
+                <button id="feedback-back" type="button">← Voltar ao site</button>
+            </div>
+        </form>
+    </dialog>
+    <script src="feedback.js?v=1" defer></script>
 </body>
 </html>
+
