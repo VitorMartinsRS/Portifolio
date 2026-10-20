@@ -69,3 +69,6 @@ Os filtros e comandos de carrossel descritos nas notas antigas não se aplicam a
 
 ## Projeto de estacionamento automatizado
 Adicionado aos projetos selecionados com link para o repositório `VitorMartinsRS/sistemas-embarcados-estacionamento`. O destaque explica que o Arduino Uno coordena os sensores ultrassônicos de entrada e saída, a contagem de até 10 vagas, o LCD I2C e o servo da cancela. Inclui a demonstração em vídeo `imagem/WhatsApp Video 2026-10-18 at 04.30.56.mp4`.
+
+## Substituição pelo Nexo Finance
+O destaque do Sistema de Controle Financeiro foi substituído pelo Nexo Finance, aplicação Python de gestão financeira. O cartão usa as quatro capturas `imagem/nexo-dashboard.png`, `imagem/nexo-login.png`, `imagem/nexo-cadastro.png` e `imagem/nexo-lancamento.png`, com visualização ampliada. O endereço de repositório ou demonstração do Nexo não foi informado; por isso, o link antigo de download foi removido.
