@@ -1,5 +1,4 @@
--- Execute uma vez no SQL Editor do seu projeto Supabase.
--- Mantém as políticas administrativas existentes.
+
 begin;
 alter table public.feedbacks enable row level security;
 grant insert (nome, comentario) on public.feedbacks to anon;
