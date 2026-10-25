@@ -24,7 +24,7 @@ A sintaxe de script.js e os caminhos locais de imagens, páginas e âncoras fora
 
 ## Pendências de conteúdo
 - Associar os links específicos de código/demonstração a cada projeto quando forem informados. O botão geral abre seus repositórios.
-- O site e o currículo têm e-mails diferentes; ambos foram preservados. Confirme qual deve ser usado.
+- O e-mail de contato do site e do currículo é vitorrobertosmartins@gmail.com.
 
 As alterações deste pacote ainda não foram enviadas ao GitHub.
 

@@ -110,8 +110,9 @@
         .nav .nav-whatsapp { color: #168c4b; }
         .nav .nav-whatsapp:hover { color: #0d6d39; }
         .nav .nav-github { color: var(--ink); }
+        .nav .nav-instagram { color: #e1306c; }
         .nav .nav-linkedin { color: #0a66c2; }
-        .nav .nav-github:hover, .nav .nav-linkedin:hover { color: var(--blue); }
+        .nav .nav-github:hover, .nav .nav-instagram:hover, .nav .nav-linkedin:hover { color: var(--blue); }
         .nav .nav-contact { color: var(--paper); background: var(--ink); padding: 12px 17px; border-radius: 99px; }
         .theme-toggle { display: grid; place-items: center; width: 37px; height: 37px; padding: 0; color: var(--ink); background: transparent; border: 1px solid var(--line); border-radius: 50%; cursor: pointer; font-size: 1rem; transition: color .2s ease, border-color .2s ease, transform .2s ease; }
         .theme-toggle:hover { color: var(--blue); border-color: var(--blue); transform: rotate(12deg); }
@@ -244,7 +245,7 @@
             .tech-pyramid { width: 90px; height: 84px; right: 8%; bottom: 5%; opacity: .65; }
             .topbar { height: auto; min-height: 74px; padding: 14px 0; align-items: flex-start; }
             .nav { flex-wrap: wrap; justify-content: flex-end; gap: 10px 14px; font-size: .68rem; }
-            .nav a:not(.nav-contact):not(.nav-whatsapp):not(.nav-github):not(.nav-linkedin) { display: none; }
+            .nav a:not(.nav-contact):not(.nav-whatsapp):not(.nav-github):not(.nav-instagram):not(.nav-linkedin) { display: none; }
             .nav .nav-contact { padding: 10px 13px; }
             .hero { display: block; padding: 78px 0 90px; }
             h1 { font-size: clamp(3.55rem, 17vw, 6rem); }
@@ -277,7 +278,7 @@
             .tech-pyramid { right: 2%; bottom: 7%; transform: scale(.72); }
             .topbar { align-items: center; }
             .nav { max-width: 230px; }
-            .nav .nav-whatsapp, .nav .nav-github, .nav .nav-linkedin { display: none; }
+            .nav .nav-whatsapp, .nav .nav-github, .nav .nav-instagram, .nav .nav-linkedin { display: none; }
             .nav .nav-contact { padding: 9px 11px; }
             .hero { padding-top: 62px; }
             h1 { font-size: clamp(3.1rem, 18vw, 4.8rem); }
@@ -294,6 +295,7 @@
 :root[data-theme="dark"] { color-scheme: dark; --blue: #84aaff; }
 :root[data-theme="dark"] .contact { background: #124edb; }
 :root[data-theme="dark"] .nav-whatsapp { color: #67dfa0; }
+:root[data-theme="dark"] .nav-instagram { color: #ff8fb1; }
 :root[data-theme="dark"] .nav-linkedin { color: #84baff; }
 :root[data-theme="dark"] .arrow-link span,
 :root[data-theme="dark"] .back-to-top { color: #081522; }
@@ -343,8 +345,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 @media (max-width: 720px) {
     .topbar { flex-wrap: wrap; gap: 12px; }
     .nav { width: 100%; max-width: none; justify-content: flex-start; gap: 8px 16px; font-size: .8rem; }
-    .nav a:not(.nav-contact):not(.nav-whatsapp):not(.nav-github):not(.nav-linkedin) { display: inline-flex; }
-    .nav .nav-whatsapp, .nav .nav-github, .nav .nav-linkedin { display: none; }
+    .nav a:not(.nav-contact):not(.nav-whatsapp):not(.nav-github):not(.nav-instagram):not(.nav-linkedin) { display: inline-flex; }
+    .nav .nav-whatsapp, .nav .nav-github, .nav .nav-instagram, .nav .nav-linkedin { display: none; }
     .hero { padding: 54px 0 64px; }
     .hero-actions { gap: 10px; }
     .section-head { align-items: flex-start; flex-direction: column; gap: 8px; }
