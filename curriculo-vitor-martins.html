@@ -3,88 +3,296 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Currículo de Vitor Roberto Silvério Martins, desenvolvedor web full stack júnior e estudante de Engenharia da Computação.">
     <title>Currículo — Vitor Roberto Silvério Martins</title>
     <style>
-        :root { --ink: #14202b; --muted: #52616d; --accent: #155bff; --line: #dbe5ea; --paper: #ffffff; }
+        :root {
+            color-scheme: light;
+            --navy: #102b43;
+            --teal: #378f91;
+            --ink: #263542;
+            --muted: #64737e;
+            --line: #d7dfe3;
+            --paper: #fff;
+            --background: #edf1f3;
+        }
+
         * { box-sizing: border-box; }
-        body { margin: 0; color: var(--ink); background: #eef5f7; font: 15px/1.6 Arial, sans-serif; }
-        main { width: min(850px, calc(100% - 40px)); margin: 40px auto; padding: 56px 64px; background: var(--paper); box-shadow: 0 18px 50px rgba(20, 32, 43, .12); }
-        header { padding-bottom: 28px; border-bottom: 3px solid var(--accent); }
-        h1 { margin: 0; font-size: 2.7rem; letter-spacing: -.06em; }
-        h2 { margin: 30px 0 8px; color: var(--accent); font-size: .82rem; letter-spacing: .12em; text-transform: uppercase; }
-        p { margin: 0; }
-        .role { margin-top: 4px; color: var(--muted); font-size: 1.05rem; }
-        .contact { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 18px; color: var(--muted); font-size: .86rem; }
+
+        body {
+            margin: 0;
+            color: var(--ink);
+            background: var(--background);
+            font: 14px/1.45 Arial, Helvetica, sans-serif;
+        }
+
         a { color: inherit; }
-        .intro { margin-top: 25px; }
-        .skills { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 30px; }
-        .skill strong { display: block; margin-bottom: 3px; }
-        ul { margin: 8px 0 0; padding-left: 20px; }
-        .note { margin-top: 34px; padding-top: 15px; color: var(--muted); border-top: 1px solid var(--line); font-size: .82rem; }
-         .resume-toolbar { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; width: min(850px, calc(100% - 40px)); margin: 24px auto; }
-        .resume-toolbar button { padding: 12px 18px; border: 0; border-radius: 8px; color: white; background: var(--accent); font: inherit; cursor: pointer; }
-        @media print { .resume-toolbar { display: none; } body { background: white; } main { width: 100%; margin: 0; padding: 25px; box-shadow: none; } }
-        @media (max-width: 600px) { main { margin: 20px auto; padding: 32px 25px; } h1 { font-size: 2.2rem; } .skills { grid-template-columns: 1fr; } }
+
+        .resume-toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            width: min(920px, calc(100% - 32px));
+            margin: 20px auto;
+        }
+
+        .resume-toolbar a { color: var(--navy); }
+
+        .resume-toolbar button {
+            padding: 10px 16px;
+            border: 0;
+            border-radius: 6px;
+            color: var(--paper);
+            background: var(--navy);
+            font: inherit;
+            cursor: pointer;
+        }
+
+        .resume-toolbar button:hover { background: var(--teal); }
+
+        main {
+            width: min(920px, calc(100% - 32px));
+            margin: 0 auto 32px;
+            overflow: hidden;
+            background: var(--paper);
+            box-shadow: 0 12px 36px rgb(16 43 67 / 12%);
+        }
+
+        .resume-header {
+            display: grid;
+            grid-template-columns: 132px 1fr;
+            align-items: center;
+            gap: 28px;
+            min-height: 160px;
+            padding: 24px 40px;
+            color: var(--paper);
+            background: var(--navy);
+        }
+
+        .portrait {
+            display: block;
+            width: 132px;
+            height: 132px;
+            border-radius: 12px;
+            object-fit: cover;
+            object-position: center 28%;
+        }
+
+        .header-accent {
+            width: 38px;
+            height: 5px;
+            margin-bottom: 12px;
+            background: #4fc4bc;
+        }
+
+        h1 {
+            max-width: 520px;
+            margin: 0;
+            font-size: clamp(1.7rem, 4vw, 2.45rem);
+            line-height: 1.06;
+            letter-spacing: -.035em;
+        }
+
+        .role {
+            margin: 12px 0 2px;
+            color: #69d0c8;
+            font-size: .92rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .degree { margin: 0; color: #d6e0e8; }
+
+        .resume-content { padding: 22px 40px 32px; }
+
+        .contact {
+            display: grid;
+            gap: 3px;
+            margin-bottom: 17px;
+            color: var(--muted);
+            font-size: .9rem;
+            font-style: normal;
+        }
+
+        .contact a {
+            color: var(--teal);
+            text-decoration: none;
+        }
+
+        .contact a:hover { text-decoration: underline; }
+
+        .contact-line {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px 14px;
+        }
+
+        section { margin-top: 16px; }
+
+        h2 {
+            margin: 0 0 7px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid var(--line);
+            color: var(--teal);
+            font-size: .94rem;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        p { margin: 0; }
+
+        .skills {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4px;
+        }
+
+        .skill {
+            display: grid;
+            grid-template-columns: 145px 1fr;
+            gap: 12px;
+        }
+
+        .skill strong, .experience h3 { color: var(--ink); }
+
+        .experience article + article { margin-top: 10px; }
+
+        .experience h3 {
+            margin: 0 0 3px;
+            font-size: .94rem;
+        }
+
+        .education strong { display: block; }
+        .education p + p { margin-top: 3px; }
+        .activities p + p { margin-top: 6px; }
+
+        @media (max-width: 600px) {
+            body { font-size: 14px; }
+            .resume-toolbar { align-items: flex-start; }
+            .resume-header {
+                grid-template-columns: 86px 1fr;
+                gap: 16px;
+                padding: 22px 20px;
+            }
+            .portrait { width: 86px; height: 100px; }
+            .resume-content { padding: 20px; }
+            .role { font-size: .78rem; }
+            .degree { font-size: .88rem; }
+            .skill { grid-template-columns: 112px 1fr; gap: 8px; }
+        }
+
+        @media print {
+            @page { size: A4; margin: 0; }
+            body { background: var(--paper); font-size: 9pt; line-height: 1.28; }
+            .resume-toolbar { display: none; }
+            main {
+                width: 210mm;
+                min-height: 297mm;
+                margin: 0;
+                box-shadow: none;
+            }
+            .resume-header {
+                grid-template-columns: 34mm 1fr;
+                gap: 7mm;
+                min-height: 42mm;
+                padding: 7mm 10mm;
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+            .portrait { width: 34mm; height: 34mm; border-radius: 3mm; }
+            .header-accent { width: 10mm; height: 1.3mm; margin-bottom: 2mm; }
+            h1 { font-size: 23pt; }
+            .role { margin-top: 2mm; font-size: 8pt; }
+            .resume-content { padding: 5mm 10mm 8mm; }
+            .contact { gap: 1px; margin-bottom: 3mm; font-size: 8pt; }
+            section { margin-top: 3.2mm; }
+            h2 { margin-bottom: 1.5mm; padding-bottom: 1mm; font-size: 8.5pt; }
+            .skills { gap: 1mm; }
+            .skill { grid-template-columns: 35mm 1fr; gap: 3mm; }
+            .experience article + article { margin-top: 2mm; }
+            .experience h3 { margin-bottom: .5mm; font-size: 8.5pt; }
+            .education p + p, .activities p + p { margin-top: 1mm; }
+            section, article { break-inside: avoid; }
+        }
     </style>
 </head>
 <body>
-    <nav class="resume-toolbar" aria-label="Ações do currículo"><a href="index.html">← Voltar ao portfólio</a><button type="button" onclick="window.print()">Imprimir / salvar em PDF</button></nav>
+    <nav class="resume-toolbar" aria-label="Ações do currículo">
+        <a href="index.html">← Voltar ao portfólio</a>
+        <button type="button" onclick="window.print()">Imprimir / salvar em PDF</button>
+    </nav>
     <main>
-        <header>
-            <h1>Vitor Roberto Silvério Martins</h1>
-            <p class="role">Desenvolvedor Full Stack Júnior · Estudante de Engenharia da Computação</p>
-            <div class="contact">
-                <span>Espinheiro, Recife-PE</span>
-                <a href="tel:+5581992710955">(81) 9 9271-0955</a>
-                <a href="mailto:vitorrobertosmartins@gmail.com">vitorrobertosmartins@gmail.com</a>
-                <a href="https://github.com/VitorMartinsRS">GitHub</a>
-                <a href="https://www.linkedin.com/in/vitormartinsrs">LinkedIn</a>
+        <header class="resume-header">
+            <img class="portrait" src="Retrato corporativo de executivo barbado.png" alt="Retrato profissional de Vitor Roberto Silvério Martins">
+            <div>
+                <div class="header-accent" aria-hidden="true"></div>
+                <h1>Vitor Roberto<br>Silvério Martins</h1>
+                <p class="role">Desenvolvedor Web Full Stack Júnior</p>
+                <p class="degree">Estudante de Engenharia da Computação</p>
             </div>
         </header>
-        <section class="intro">
-            <h2>Resumo profissional</h2>
-            <p>Estudante de Engenharia da Computação (6º período) na Uninassau e Desenvolvedor Full Stack Júnior, com experiência prática em Java, Python, React, Angular, JavaScript e TypeScript. Integrante da Liga Acadêmica de Segurança da Informação e Cibersegurança (LaSic) e da comunidade Recife Front-End (REFC), atuando como desenvolvedor do Verifica+, plataforma dedicada ao combate à desinformação. Atualmente aprofundo meus estudos em linguagens de baixo nível, como C e C++, para ampliar minha base técnica em desenvolvimento de software.</p>
-        </section>
-        <section>
-            <h2>Habilidades técnicas</h2>
-            <div class="skills">
-                <div class="skill"><strong>Linguagens</strong><span>Java, Python, JavaScript, TypeScript, C, C++ e C#</span></div>
-                <div class="skill"><strong>Front-end</strong><span>React.js, Angular, HTML5, CSS3 e interfaces responsivas</span></div>
-                <div class="skill"><strong>Back-end</strong><span>Spring Boot, APIs RESTful, arquitetura de aplicações e integração de serviços</span></div>
-                <div class="skill"><strong>Banco de dados</strong><span>MySQL, MariaDB, MongoDB, SQL, modelagem de dados e conceitos NoSQL</span></div>
-                <div class="skill"><strong>Sistemas e infraestrutura</strong><span>Linux (Kali Linux), redes de computadores, configuração e manutenção de hardware</span></div>
-                <div class="skill"><strong>Ferramentas</strong><span>Git, GitHub, Unity, Microsoft Office e Canva</span></div>
-                <div class="skill"><strong>Conceitos</strong><span>POO, estruturas de dados, APIs, integração front-end/back-end e fundamentos de engenharia de software</span></div>
-            </div>
-        </section>
-        <section>
-            <h2>Experiência e projetos</h2>
-            <ul>
-                <li><strong>Projeto Verifica+ — Desenvolvedor:</strong> desenvolvimento de plataforma web voltada ao combate à desinformação, com front-end, integração de frameworks e consumo de APIs.</li>
-                <li>Colaboração no projeto de extensão “No fluxo da informação: Da Fake News à consciência digital”, aplicado na escola EREM Jornalista Trajano Chacon.</li>
-                <li><strong>Projeto de Tecnologia Social — AACA:</strong> desenvolvimento de solução tecnológica para crianças atendidas pela Associação de Apoio a Crianças e Adolescentes, com foco em acessibilidade e aprendizado.</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Formação acadêmica</h2>
-            <ul>
-                <li>Engenharia da Computação — Uninassau (cursando, 6º período)</li>
-                <li>Ensino Médio Completo</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Atividades complementares</h2>
-            <ul>
-                <li>Liga Acadêmica de Segurança da Informação e Cibersegurança (LaSic)</li>
-                <li>Comunidade Recife Front-End (REFC)</li>
-                <li>Formação complementar em desenvolvimento web, programação, banco de dados, redes e Linux</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Idiomas</h2>
-            <p>Inglês — Básico (A2)</p>
-        </section>
-        <p class="note">Currículo atualizado em 2026.</p>
+        <div class="resume-content">
+            <address class="contact">
+                <span>Espinheiro, Recife - PE&nbsp; | &nbsp;<a href="tel:+5581992710955">(81) 9 9271-0955</a></span>
+                <a href="mailto:vitorrobertosmartins@gmail.com">vitorrobertosmartins@gmail.com</a>
+                <span class="contact-line">
+                    <span>GitHub: <a href="https://github.com/VitorMartinsRS" target="_blank" rel="noopener noreferrer">VitorMartinsRS</a></span>
+                    <span>LinkedIn: <a href="https://www.linkedin.com/in/vitormartinsrs" target="_blank" rel="noopener noreferrer">VitorMartinsRS</a></span>
+                </span>
+                <span>Portfólio: <a href="https://vitormartinsrs.github.io/Portifolio/" target="_blank" rel="noopener noreferrer">vitormartinsrs.github.io/Portifolio/</a></span>
+            </address>
+
+            <section>
+                <h2>Perfil profissional</h2>
+                <p>Desenvolvedor Web Full Stack com experiência em portfólios comerciais e sites de divulgação de aplicativos e estudante de Engenharia da Computação (6º período) na Uninassau. Experiência prática em Java, Python, React, Angular, JavaScript e TypeScript. Desenvolvimento de projetos como Afinp Finance e Verifica+, com integração entre interfaces, APIs REST e banco de dados. Integrante da LaSic e da comunidade Recife Front-End.</p>
+            </section>
+
+            <section>
+                <h2>Competências técnicas</h2>
+                <div class="skills">
+                    <div class="skill"><strong>Linguagens</strong><span>Java, Python, JavaScript, TypeScript, C, C++ e C#.</span></div>
+                    <div class="skill"><strong>Front-end</strong><span>React.js, Angular, HTML5, CSS3 e interfaces responsivas.</span></div>
+                    <div class="skill"><strong>Back-end e IA</strong><span>Spring Boot, APIs REST/RESTful, integração de serviços e agentes de IA.</span></div>
+                    <div class="skill"><strong>Banco de dados</strong><span>MySQL, MariaDB, MongoDB, SQL, NoSQL e modelagem de dados.</span></div>
+                    <div class="skill"><strong>Sistemas</strong><span>Linux (Kali Linux), redes de computadores e manutenção de hardware.</span></div>
+                    <div class="skill"><strong>Ferramentas</strong><span>Git, GitHub, Unity, Microsoft Office e Canva.</span></div>
+                    <div class="skill"><strong>Fundamentos</strong><span>POO, estruturas de dados, arquitetura de aplicações, integração front-end/back-end e fundamentos de engenharia de software.</span></div>
+                </div>
+            </section>
+
+            <section class="experience">
+                <h2>Experiência e projetos</h2>
+                <article>
+                    <h3>Desenvolvedor Web Full Stack | Projetos web</h3>
+                    <p>Desenvolvimento de portfólios comerciais e sites de divulgação de aplicativos, com apresentação de serviços, recursos e informações de contato. Criação de interfaces responsivas, organização da navegação e adaptação para dispositivos móveis. Integração entre front-end, APIs REST e banco de dados conforme as necessidades dos projetos.</p>
+                </article>
+                <article>
+                    <h3>Afinp Finance | Projeto de desenvolvimento de software</h3>
+                    <p>Desenvolvimento de aplicação de gestão financeira para Windows e Android, com controle de receitas e despesas, categorias, anotações, gráficos e planejamento de compras parceladas, empréstimos e financiamentos. Integração com Supabase por APIs REST, autenticação e persistência em PostgreSQL, com regras de acesso por usuário. Tecnologias: Python, Java, JavaScript e SQL.</p>
+                </article>
+                <article>
+                    <h3>Verifica+ | Desenvolvedor</h3>
+                    <p>Desenvolvimento de plataforma web de combate a fake news, com front-end, integração de frameworks e consumo de APIs. Colaboração no projeto de extensão “No fluxo da informação: Da Fake News à consciência digital”, aplicado na EREM Jornalista Trajano Chacon.</p>
+                </article>
+                <article>
+                    <h3>Tecnologia Social | AACA</h3>
+                    <p>Desenvolvimento de solução tecnológica para crianças atendidas pela Associação de Apoio a Crianças e Adolescentes, com foco em acessibilidade e aprendizado.</p>
+                </article>
+            </section>
+
+            <section class="education">
+                <h2>Formação acadêmica</h2>
+                <strong>Engenharia da Computação | Uninassau</strong>
+                <p>Cursando, 6º período&nbsp; • &nbsp;Ensino Médio completo</p>
+            </section>
+
+            <section class="activities">
+                <h2>Atividades complementares e idiomas</h2>
+                <p>Liga Acadêmica de Segurança da Informação e Cibersegurança (LaSic) • Comunidade Recife Front-End (REFC). Formação complementar em desenvolvimento web, programação, banco de dados, redes e Linux.</p>
+                <p><strong>Inglês:</strong> básico (A2).</p>
+            </section>
+        </div>
     </main>
 </body>
 </html>

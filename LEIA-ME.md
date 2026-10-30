@@ -7,7 +7,7 @@ Mantidos o conteúdo principal, as imagens, a paleta e os temas claro/escuro.
 - Apresentação padronizada como desenvolvedor e estudante.
 - Projetos abrem imagens e descrições em uma janela com fechamento por Escape.
 - Carrossel manual, com posição corrigida e controles acessíveis.
-- Currículo abre uma página com opção de imprimir ou salvar em PDF pelo navegador.
+- Currículo em HTML responsivo, com o conteúdo e a identidade visual de `Vitor_Martins.pdf`, retrato e opção de imprimir ou salvar em PDF pelo navegador.
 - Contato por WhatsApp e e-mail em destaque.
 - Suporte a movimento reduzido e navegação por teclado.
 
