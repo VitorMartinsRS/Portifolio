@@ -19,7 +19,7 @@ try {
     savedTheme = localStorage.getItem('portfolio-theme');
 }
 catch { /* Armazenamento opcional. */ }
-setTheme(savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+setTheme(savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'dark');
 themeToggle.addEventListener('click', () => {
     const theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
     setTheme(theme);
@@ -33,6 +33,80 @@ backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: mo
 const updateTopButton = () => { backToTop.hidden = window.scrollY <= 120; };
 window.addEventListener('scroll', updateTopButton, { passive: true });
 updateTopButton();
+document.querySelectorAll('[data-carousel]').forEach((carousel, carouselIndex) => {
+    const slides = Array.from(carousel.children).filter(slide => slide instanceof HTMLElement);
+    if (slides.length === 0)
+        return;
+    if (!carousel.id)
+        carousel.id = `media-carousel-${carouselIndex + 1}`;
+    carousel.setAttribute('role', 'region');
+    carousel.setAttribute('aria-roledescription', 'carrossel');
+    carousel.tabIndex = 0;
+    slides.forEach((slide, slideIndex) => {
+        slide.setAttribute('role', 'group');
+        slide.setAttribute('aria-roledescription', 'slide');
+        slide.setAttribute('aria-label', `${slideIndex + 1} de ${slides.length}`);
+    });
+    const controls = document.createElement('div');
+    controls.className = 'carousel-controls media-carousel-controls';
+    controls.setAttribute('role', 'group');
+    controls.setAttribute('aria-label', 'Controles do carrossel');
+    const previous = document.createElement('button');
+    previous.type = 'button';
+    previous.className = 'carousel-button';
+    previous.setAttribute('aria-label', 'Mídia anterior');
+    previous.setAttribute('aria-controls', carousel.id);
+    previous.textContent = '←';
+    const status = document.createElement('span');
+    status.className = 'media-carousel-status';
+    status.setAttribute('aria-live', 'polite');
+    status.setAttribute('aria-atomic', 'true');
+    const next = document.createElement('button');
+    next.type = 'button';
+    next.className = 'carousel-button';
+    next.setAttribute('aria-label', 'Próxima mídia');
+    next.setAttribute('aria-controls', carousel.id);
+    next.textContent = '→';
+    controls.append(previous, status, next);
+    carousel.insertAdjacentElement('afterend', controls);
+    let activeIndex = 0;
+    const updateControls = () => {
+        status.textContent = `${activeIndex + 1} / ${slides.length}`;
+        previous.disabled = activeIndex === 0;
+        next.disabled = activeIndex === slides.length - 1;
+    };
+    const update = () => {
+        activeIndex = Math.min(slides.length - 1, Math.round(carousel.scrollLeft / Math.max(carousel.clientWidth, 1)));
+        updateControls();
+        slides.forEach((slide, slideIndex) => {
+            if (slideIndex !== activeIndex)
+                slide.querySelectorAll('video').forEach(video => video.pause());
+        });
+    };
+    const goTo = (index) => {
+        const slide = slides[index];
+        if (!slide)
+            return;
+        activeIndex = index;
+        updateControls();
+        carousel.scrollTo({ left: slide.offsetLeft, behavior: motion() });
+    };
+    previous.addEventListener('click', () => goTo(activeIndex - 1));
+    next.addEventListener('click', () => goTo(activeIndex + 1));
+    carousel.addEventListener('scroll', update, { passive: true });
+    carousel.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowLeft') {
+            event.preventDefault();
+            goTo(activeIndex - 1);
+        }
+        else if (event.key === 'ArrowRight') {
+            event.preventDefault();
+            goTo(activeIndex + 1);
+        }
+    });
+    window.addEventListener('resize', update);
+    update();
+});
 const dialog = required('.project-dialog');
 let projectOpener = null;
 if (typeof dialog.showModal === 'function') {
