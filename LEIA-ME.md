@@ -1,42 +1,43 @@
-# Portfólio — melhorias
+# Portfólio de Vitor Martins
 
-Mantidos o conteúdo principal, as imagens, a paleta e os temas claro/escuro.
+Site pessoal de apresentação profissional, projetos, currículo e contato. A interface é responsiva, abre em tema escuro por padrão e permite alternar entre tema escuro e claro.
 
-## Alterações
-- Navegação no celular e botões maiores.
-- Apresentação padronizada como desenvolvedor e estudante.
-- Projetos abrem imagens e descrições em uma janela com fechamento por Escape.
-- Carrossel manual, com posição corrigida e controles acessíveis.
-- Currículo em HTML responsivo, com o conteúdo e a identidade visual de `Vitor_Martins.pdf`, retrato e opção de imprimir ou salvar em PDF pelo navegador.
-- Contato por WhatsApp e e-mail em destaque.
-- Suporte a movimento reduzido e navegação por teclado.
+## Projetos
 
-## Atualizar o GitHub Pages
-1. Faça uma cópia dos arquivos atuais ou crie uma branch no repositório.
-2. Substitua index.html, style.css e curriculo-vitor-martins.html pelos arquivos desta pasta.
-3. Adicione script.js na mesma pasta. Mantenha a pasta imagem.
-4. Faça commit na branch usada pelo GitHub Pages e aguarde a publicação.
+- **Renato Silva — Portfólio comercial:** capturas do site e link para a versão publicada.
+- **Smart Citys:** resumo sobre cidades inteligentes e o potencial do Nordeste como futuro polo de inovação, com carrosséis separados para fotos e vídeos. A foto da palestra e o vídeo correspondente estão identificados.
+- **Afinp Finance:** imagens das versões desktop e mobile.
+- **Estacionamento automatizado:** projeto com Arduino Uno, sensores ultrassônicos, LCD I2C e cancela servo; inclui vídeo da apresentação Smart Citys e demonstração do sistema.
+- **Verifica+:** capturas da interface e link para a aplicação publicada.
+- **Jogo de xadrez em Java:** capturas da interface e do desenvolvimento.
 
-Não é necessário instalar dependências ou configurar um banco de dados.
+As galerias de mídia usam carrosséis com botões anterior/próximo, contador e navegação pelas setas do teclado. As fotos podem ser ampliadas. Os arquivos de mídia ficam na pasta `imagem/`.
 
-## Verificação
-A sintaxe de script.js e os caminhos locais de imagens, páginas e âncoras foram conferidos. Não foi feita validação visual em navegador nesta entrega. Antes de publicar, confira a página em celular e computador, alterne o tema, percorra os projetos e abra o currículo.
+## Recursos do site
 
-## Pendências de conteúdo
-- Associar os links específicos de código/demonstração a cada projeto quando forem informados. O botão geral abre seus repositórios.
-- O e-mail de contato do site e do currículo é vitorrobertosmartins@gmail.com.
+- Layout responsivo para celular e computador.
+- Tema escuro padrão; a escolha de tema é salva no navegador.
+- Galerias com controles acessíveis e suporte a movimento reduzido.
+- Janela para ampliar imagens dos projetos.
+- Links para currículo, GitHub, redes sociais, WhatsApp e e-mail.
+- Formulário de feedback conectado ao Supabase.
+- Painel administrativo de feedbacks em `admin.html`.
 
-As alterações deste pacote ainda não foram enviadas ao GitHub.
+## Arquivos principais
 
-## JavaScript e TypeScript
-- `src/script.ts`: código-fonte com tipos e verificações estritas.
-- `script.js`: JavaScript compilado que o navegador executa.
-- `tsconfig.json`: configuração de compilação.
-- `package.json` e `package-lock.json`: comandos e versão fixa do compilador.
+- `index.html`: conteúdo e estrutura do portfólio.
+- `style.css` e `feedback.css`: estilos do site e do formulário de feedback.
+- `src/script.ts`: código-fonte TypeScript da interface.
+- `script.js`: JavaScript compilado, carregado pelo site.
+- `feedback.js`: envio de feedback ao Supabase.
+- `curriculo-vitor-martins.html`: currículo responsivo, com opção de impressão ou salvamento em PDF pelo navegador.
+- `admin.html`: painel de administração dos feedbacks.
+- `liberar-feedback.sql`: política de Row Level Security para permitir o envio público de feedback.
+- `imagem/`: imagens e vídeos usados nos projetos.
 
-Novos recursos: filtros Todos/Java/Python/Web, contador de projetos, navegação com setas, Home e End, e retorno de foco ao fechar a imagem ampliada. Todos os projetos continuam disponíveis sem JavaScript; os filtros só aparecem quando inicializados.
+## Desenvolvimento
 
-Para desenvolver, instale Node.js e execute na pasta do projeto:
+Requer Node.js e npm. Na pasta do projeto, instale as dependências e valide ou compile o TypeScript:
 
 ```sh
 npm ci
@@ -44,31 +45,14 @@ npm run check
 npm run build
 ```
 
-Edite `src/script.ts`, depois execute `npm run build`. Não edite `script.js` diretamente, pois ele será regenerado. Para publicar no GitHub Pages, envie também o `script.js` já compilado; o navegador não executa TypeScript diretamente. Não envie a pasta `node_modules`.
+Edite `src/script.ts` e execute `npm run build` para atualizar `script.js`. O navegador carrega o JavaScript compilado, não o TypeScript diretamente. Não é necessário instalar dependências para abrir o site estático; basta abrir `index.html` ou servir a pasta com um servidor local.
 
-Compilação TypeScript, verificação estrita e sintaxe JavaScript aprovadas nesta versão. A revisão visual no navegador continua pendente.
+## Feedback e Supabase
 
-## Projeto comercial de Renato Silva
-Adicionado destaque em Projetos selecionados com três capturas reais: página inicial, catálogo Arla Eco 32 e catálogo Bardahl. As imagens podem ser ampliadas. Os botões abrem o site publicado e o repositório correspondente. Tecnologias informadas a partir do repositório: HTML, CSS e JavaScript.
-As capturas foram feitas em 19/10/2026 (UTC). Para atualizar o GitHub Pages, envie também as três imagens imagem/renato-*.jpg.
+O formulário envia nome e comentário para a tabela `public.feedbacks` no Supabase. A chave usada no navegador é uma chave publicável; a proteção dos dados depende das políticas RLS, nunca de esconder essa chave. O arquivo `liberar-feedback.sql` habilita a política de inserção pública com validação de tamanho dos campos. Execute-o no projeto Supabase correspondente.
 
-## Atualização dos projetos — 19/10/2026
-- Renato Silva: removido o botão de código; mantido Visitar site.
-- Controle financeiro: adicionado destaque com três capturas do README público do repositório (dashboard, tela inicial e cadastro de entrada). Botão aponta ao endereço de download fornecido pelo proprietário. Essa página não pôde ser acessada pelo navegador de verificação; confira a disponibilidade antes de publicar.
-- Verifica+: captura real da página publicada, descrição e botão Visitar site. A captura documenta a interface; o funcionamento da análise de notícias não foi validado.
-- O endereço github.com/VitorMartinsRS/projetojava retornou 404 no acesso público. Os cartões Java existentes foram preservados, sem criar associação ou link de demonstração não confirmado. Envie o endereço correto ou arquivos para completar esse destaque.
-- As versões TypeScript e JavaScript compilado continuam incluídas.
+O painel `admin.html` requer autenticação no Supabase e restringe o acesso ao usuário administrador configurado no próprio arquivo. Não publique credenciais privadas ou chaves `service_role` no código do navegador.
 
-## Galerias fixas — versão atual
-O carrossel antigo e sua lógica TypeScript foram removidos. Agora são quatro projetos com galerias fixas e ampliação por clique:
-- Renato Silva: 5 capturas.
-- Controle financeiro: 5 capturas.
-- Verifica+: 2 capturas (interface inicial e validação de campo vazio).
-- Xadrez Java: 2 capturas originais do portfólio, identificadas pela inspeção das imagens (interface e desenvolvimento JavaFX).
-Os filtros e comandos de carrossel descritos nas notas antigas não se aplicam a esta versão. O projeto Java permanece sem botão de site porque não foi fornecido um endereço público funcional.
+## Publicação
 
-## Projeto de estacionamento automatizado
-Adicionado aos projetos selecionados com link para o repositório `VitorMartinsRS/sistemas-embarcados-estacionamento`. O destaque explica que o Arduino Uno coordena os sensores ultrassônicos de entrada e saída, a contagem de até 10 vagas, o LCD I2C e o servo da cancela. Inclui a demonstração em vídeo `imagem/WhatsApp Video 2026-10-18 at 04.30.56.mp4`.
-
-## Afinp Finance
-O destaque do Sistema de Controle Financeiro apresenta o Afinp Finance. A galeria usa `imagem/01-capa-pc-mobile.png` e `imagem/03-versao-mobile.png`, com visualização ampliada, para mostrar as versões desktop, mobile e Android. O endereço de repositório ou demonstração do projeto não foi informado; por isso, o link antigo de download foi removido.
+O portfólio pode ser publicado em GitHub Pages ou outro host estático. Envie os arquivos HTML, CSS e JavaScript, o currículo, os arquivos SQL necessários e a pasta `imagem/`, preservando a estrutura de diretórios. Se alterar `src/script.ts`, gere e publique também o `script.js` atualizado. Configure o Supabase separadamente para que envio e administração de feedbacks funcionem.
