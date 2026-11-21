@@ -11,6 +11,7 @@
   --afinp-blue: #0b1529;
   --afinp-cyan: #22d3ee;
   --renato-amber: #f59e0b;
+  --alan-olive: #6b8e23;
   --shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
   --font-sans: 'Manrope', system-ui, -apple-system, sans-serif;
   --font-mono: 'DM Mono', monospace;
@@ -299,6 +300,31 @@ kbd {
   flex-shrink: 0;
 }
 
+.btn-alan {
+  background: linear-gradient(135deg, #0b0d0c, #1a231c);
+  color: #e4ede6;
+  border-color: rgba(107, 142, 35, 0.55);
+  box-shadow: 0 8px 24px rgba(11, 13, 12, 0.45);
+}
+
+.btn-alan:hover {
+  border-color: #8ab334;
+}
+
+.alan-badge-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 22px;
+  height: 20px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #6b8e23, #4d6818);
+  color: #f4f7f2;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.68rem;
+  flex-shrink: 0;
+}
+
 .btn-secondary {
   background: var(--bg-card);
   border-color: var(--border);
@@ -564,7 +590,7 @@ kbd {
   border: 1px solid var(--border);
 }
 
-/* Showcases (Afinp & Renato Silva) */
+/* Showcases (Afinp, Renato Silva & Alan Santos) */
 .afinp-tabs, .renato-tabs {
   display: flex;
   gap: 8px;
@@ -615,6 +641,11 @@ kbd {
   background: #141210;
 }
 
+.browser-frame--alan {
+  border-color: rgba(107, 142, 35, 0.45);
+  background: #0b0d0c;
+}
+
 .browser-bar {
   display: flex;
   align-items: center;
@@ -628,6 +659,11 @@ kbd {
 .browser-frame--renato .browser-bar {
   background: #1b1713;
   border-bottom-color: rgba(245, 158, 11, 0.2);
+}
+
+.browser-frame--alan .browser-bar {
+  background: #111512;
+  border-bottom-color: rgba(107, 142, 35, 0.25);
 }
 
 .browser-dots {
@@ -654,6 +690,11 @@ kbd {
 .browser-frame--renato .browser-url,
 .browser-frame--renato .browser-open {
   color: #fcd34d;
+}
+
+.browser-frame--alan .browser-url,
+.browser-frame--alan .browser-open {
+  color: #a3cc52;
 }
 
 .browser-open {

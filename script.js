@@ -244,18 +244,21 @@ document.addEventListener('DOMContentLoaded', () => {
     printCmd(`<span style="color:#10b981">&gt; ${cmd}</span>`);
 
     if (cmd === 'help') {
-      printCmd('Comandos: <strong>afinp</strong> (abrir Afinp Web), <strong>renato</strong> (abrir Portfólio Renato Silva), <strong>projects</strong> (ir para projetos), <strong>skills</strong> (stack técnica), <strong>contact</strong> (WhatsApp/LinkedIn), <strong>clear</strong> (limpar).');
+      printCmd('Comandos: <strong>afinp</strong> (Afinp Web), <strong>renato</strong> (Renato Silva), <strong>alan</strong> (Alan Santos), <strong>projects</strong> (projetos), <strong>skills</strong> (stack), <strong>contact</strong> (contato), <strong>clear</strong>.');
     } else if (cmd === 'afinp') {
       printCmd('Abrindo <a href="https://vitormartinsrs.github.io/afinp-web/" target="_blank" style="color:#38bdf8">vitormartinsrs.github.io/afinp-web/</a>...');
       window.open('https://vitormartinsrs.github.io/afinp-web/', '_blank', 'noopener,noreferrer');
     } else if (cmd === 'renato') {
       printCmd('Abrindo <a href="https://renatosilvarep.github.io/Portfoliocomercial/" target="_blank" style="color:#fcd34d">renatosilvarep.github.io/Portfoliocomercial/</a>...');
       window.open('https://renatosilvarep.github.io/Portfoliocomercial/', '_blank', 'noopener,noreferrer');
+    } else if (cmd === 'alan') {
+      printCmd('Abrindo <a href="https://alanadsantos.github.io/portifolio/" target="_blank" style="color:#a3cc52">alanadsantos.github.io/portifolio/</a>...');
+      window.open('https://alanadsantos.github.io/portifolio/', '_blank', 'noopener,noreferrer');
     } else if (cmd === 'projects') {
       closeCmd();
       document.getElementById('trabalho')?.scrollIntoView({ behavior: 'smooth' });
     } else if (cmd === 'skills') {
-      printCmd('Stack: HTML5, CSS3, JavaScript, Java (Spring Boot), Python, Supabase, Arduino UNO (C/C++).');
+      printCmd('Stack: React, HTML5, CSS3, JavaScript, Java (Spring Boot), Python, Supabase, Arduino UNO (C/C++).');
     } else if (cmd === 'contact') {
       printCmd('WhatsApp: (81) 99271-0955 · GitHub: @VitorMartinsRS · LinkedIn: /in/vitormartinsrs');
     } else if (cmd === 'clear') {

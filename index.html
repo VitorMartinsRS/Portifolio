@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=8">
+  <link rel="stylesheet" href="style.css?v=9">
   <link rel="stylesheet" href="feedback.css?v=1">
 </head>
 <body>
@@ -67,10 +67,6 @@
             <img src="https://vitormartinsrs.github.io/afinp-web/assets/afinplogo.png" alt="" width="18" height="18" onerror="this.style.display='none'">
             Afinp Finance ↗
           </a>
-          <a class="btn btn-renato" href="https://renatosilvarep.github.io/Portfoliocomercial/" target="_blank" rel="noopener noreferrer">
-            <span class="renato-badge-mark">R</span>
-            Renato Silva ↗
-          </a>
           <a class="btn btn-secondary" href="https://vitormartinsrs.github.io/catalogo/" target="_blank" rel="noopener noreferrer">Ver catálogo ↗</a>
           <a class="btn btn-secondary" href="curriculo-vitor-martins.html">Ver currículo ↗</a>
           <button class="btn btn-ghost" type="button" data-open-feedback>Deixar feedback ↗</button>
@@ -103,13 +99,22 @@
             <span class="renato-badge-mark">R</span>
             <h4>Renato Silva</h4>
           </div>
-          <p>Catálogo B2B Arla Eco 32, Bardahl e Triplo X com pedido via WhatsApp.</p>
+          <p>Catálogo B2B Arla Eco 32, Bardahl e Triplo X via WhatsApp.</p>
+        </a>
+
+        <a class="bento-card bento-link-card bento-span-2" href="https://alanadsantos.github.io/portifolio/" target="_blank" rel="noopener noreferrer">
+          <span class="bento-tag">PORTFÓLIO DESENVOLVIDO (REACT + BENTO GRID) ↗</span>
+          <div class="bento-brand-row">
+            <span class="alan-badge-mark">AS</span>
+            <h4>Alan Santos — Portfólio Dev</h4>
+          </div>
+          <p>Aplicação React minimalista em verde militar e preto fosco destacando projetos em C, Python, Java e Spring Boot.</p>
         </a>
 
         <div class="bento-card bento-span-2">
           <span class="bento-tag">STACK INTERATIVA (CLIQUE PARA FILTRAR) · <span id="ghReposCount">GITHUB LIVE</span></span>
           <div class="stack-pills">
-            <button type="button" class="stack-pill" data-filter-jump="web">HTML / CSS / JS</button>
+            <button type="button" class="stack-pill" data-filter-jump="web">HTML / CSS / JS / React</button>
             <button type="button" class="stack-pill" data-filter-jump="web">Java / Spring Boot</button>
             <button type="button" class="stack-pill" data-filter-jump="python">Python / Supabase</button>
             <button type="button" class="stack-pill" data-filter-jump="iot">Arduino / C++</button>
@@ -127,7 +132,7 @@
           <h2>Projetos selecionados</h2>
         </div>
         <div class="filter-bar" role="tablist" aria-label="Filtrar projetos por área">
-          <button class="filter-btn active" type="button" data-filter="all">Todos (4)</button>
+          <button class="filter-btn active" type="button" data-filter="all">Todos (5)</button>
           <button class="filter-btn" type="button" data-filter="web">Web</button>
           <button class="filter-btn" type="button" data-filter="python">Python &amp; Dados</button>
           <button class="filter-btn" type="button" data-filter="iot">Smart Citys &amp; IoT</button>
@@ -326,7 +331,51 @@
         </div>
       </article>
 
-      <!-- 03. Smart Citys -->
+      <!-- 03. Alan Santos — Portfólio Desenvolvedor -->
+      <article class="project-card" data-category="web" aria-labelledby="alan-title">
+        <div class="project-header">
+          <div>
+            <div class="project-label-row">
+              <span class="alan-badge-mark">AS</span>
+              <span class="label">Projeto para cliente · React + Bento Grid Minimalista</span>
+            </div>
+            <h3 id="alan-title">
+              <a href="https://alanadsantos.github.io/portifolio/" target="_blank" rel="noopener noreferrer" class="project-title-link">
+                Alan Santos — Portfólio Desenvolvedor ↗
+              </a>
+            </h3>
+            <p>Portfólio profissional desenvolvido em React com estética Bento Grid Minimalista em verde militar, preto fosco e carvão. Apresenta stack completa (Python, C, Java, Spring Boot, Angular, Django, PostgreSQL, MariaDB) e projetos como o sistema de estacionamento SmartCities em C.</p>
+          </div>
+          <div class="technology-tags">
+            <span>React</span><span>JavaScript</span><span>CSS Grid / Bento</span><span>UI/UX Dark</span>
+          </div>
+        </div>
+
+        <div class="browser-frame browser-frame--alan">
+          <div class="browser-bar">
+            <div class="browser-dots"><span></span><span></span><span></span></div>
+            <a class="browser-url" href="https://alanadsantos.github.io/portifolio/" target="_blank" rel="noopener noreferrer">
+              https://alanadsantos.github.io/portifolio/ ↗
+            </a>
+            <a class="browser-open" href="https://alanadsantos.github.io/portifolio/" target="_blank" rel="noopener noreferrer">Abrir tela cheia</a>
+          </div>
+          <iframe
+            src="https://alanadsantos.github.io/portifolio/"
+            title="Prévia ao vivo do Portfólio Alan Santos"
+            loading="lazy"
+            class="afinp-iframe">
+          </iframe>
+        </div>
+
+        <div class="project-actions">
+          <a class="btn btn-alan" href="https://alanadsantos.github.io/portifolio/" target="_blank" rel="noopener noreferrer">
+            <span class="alan-badge-mark">AS</span>
+            Acessar Portfólio Alan Santos ↗
+          </a>
+        </div>
+      </article>
+
+      <!-- 04. Smart Citys -->
       <article class="project-card" data-category="iot web" aria-labelledby="smart-citys-title">
         <div class="project-header">
           <div>
@@ -415,7 +464,7 @@
         </div>
       </article>
 
-      <!-- 04. Sistema de Cancela Automatizada com Arduino -->
+      <!-- 05. Sistema de Cancela Automatizada com Arduino -->
       <article class="project-card" data-category="iot" aria-labelledby="arduino-title">
         <div class="project-header">
           <div>
@@ -459,7 +508,7 @@
         <div class="about-cards">
           <div class="mini-card">
             <strong>Desenvolvimento Web &amp; Backend</strong>
-            <p>Interfaces responsivas em HTML5/CSS3/JS moderno, integração com bancos em nuvem (Supabase) e APIs em Java Spring Boot.</p>
+            <p>Interfaces responsivas em React e HTML5/CSS3/JS moderno, integração com bancos em nuvem (Supabase) e APIs em Java Spring Boot.</p>
           </div>
           <div class="mini-card">
             <strong>Python &amp; Produtos Digitais</strong>
@@ -485,6 +534,7 @@
           <a class="btn btn-primary" href="https://wa.me/5581992710955?text=Ol%C3%A1%2C%20Vitor!%20Conheci%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20uma%20ideia%20que%20quero%20tirar%20do%20papel." target="_blank" rel="noopener noreferrer">Chamar no WhatsApp ↗</a>
           <a class="btn btn-afinp" href="https://vitormartinsrs.github.io/afinp-web/" target="_blank" rel="noopener noreferrer">Afinp Finance ↗</a>
           <a class="btn btn-renato" href="https://renatosilvarep.github.io/Portfoliocomercial/" target="_blank" rel="noopener noreferrer">Portfólio Renato Silva ↗</a>
+          <a class="btn btn-alan" href="https://alanadsantos.github.io/portifolio/" target="_blank" rel="noopener noreferrer">Portfólio Alan Santos ↗</a>
           <a class="btn btn-secondary" href="https://www.linkedin.com/in/vitormartinsrs" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
           <a class="btn btn-secondary" href="https://github.com/VitorMartinsRS" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
           <a class="btn btn-secondary" href="https://www.instagram.com/vitormartins.rs/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
@@ -529,6 +579,7 @@
       <div class="cmd-suggestions">
         <button type="button" data-cmd="afinp">afinp</button>
         <button type="button" data-cmd="renato">renato</button>
+        <button type="button" data-cmd="alan">alan</button>
         <button type="button" data-cmd="projects">projects</button>
         <button type="button" data-cmd="skills">skills</button>
         <button type="button" data-cmd="contact">contact</button>
@@ -537,7 +588,7 @@
       <form class="cmd-form" id="cmdForm">
         <label for="cmdInput" class="sr-only">Comando</label>
         <span>&gt;</span>
-        <input type="text" id="cmdInput" placeholder="Digite help, afinp, renato, projects, skills..." autocomplete="off">
+        <input type="text" id="cmdInput" placeholder="Digite help, afinp, renato, alan, projects..." autocomplete="off">
       </form>
     </div>
   </div>
@@ -560,6 +611,6 @@
     </div>
   </div>
 
-  <script src="script.js?v=8" defer></script>
+  <script src="script.js?v=9" defer></script>
 </body>
 </html>
