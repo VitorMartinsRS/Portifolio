@@ -236,6 +236,24 @@ kbd {
   font-weight: 700 !important;
 }
 
+.brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-link svg {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  fill: currentColor;
+}
+
+.brand-whatsapp { color: #25d366 !important; }
+.brand-linkedin { color: #0a66c2 !important; }
+.brand-github { color: var(--text) !important; }
+.brand-instagram { color: #e1306c !important; }
+
 /* Botões & Badges de Marca */
 .btn {
   display: inline-flex;
@@ -400,6 +418,37 @@ kbd {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 14px;
+}
+
+.bento-profile {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 168px;
+  overflow: hidden;
+}
+
+.bento-profile img {
+  width: 132px;
+  height: 132px;
+  flex: 0 0 132px;
+  border: 1px solid var(--border-strong);
+  border-radius: 14px;
+  object-fit: cover;
+  object-position: center 22%;
+  background: transparent;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+}
+
+.bento-profile h3 {
+  margin: 8px 0 4px;
+  font-size: 1.1rem;
+}
+
+.bento-profile p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.88rem;
 }
 
 .bento-card {
@@ -1112,6 +1161,58 @@ kbd {
   font-size: 0.88rem;
 }
 
+.reading-section {
+  padding: 20px 0 40px;
+}
+
+.reading-card {
+  position: relative;
+  overflow: hidden;
+  padding: 36px 32px 32px;
+  border-radius: 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.reading-tape {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 12px;
+  background: repeating-linear-gradient(135deg, #facc15 0 12px, #111827 12px 24px);
+}
+
+.reading-copy h2 {
+  margin: 6px 0 8px;
+}
+
+.reading-copy p {
+  margin: 0;
+  color: var(--text-muted);
+  max-width: 62ch;
+}
+
+.reading-sign {
+  padding: 6px;
+  background: repeating-linear-gradient(135deg, #facc15 0 12px, #111827 12px 24px);
+  transform: rotate(-2deg);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
+}
+
+.reading-sign span {
+  display: block;
+  padding: 9px 16px;
+  background: #111827;
+  color: #facc15;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  white-space: nowrap;
+}
+
 .contact-box {
   padding: 32px;
   border-radius: 24px;
@@ -1292,6 +1393,31 @@ kbd {
 @media (max-width: 900px) {
   .hero, .about-grid {
     grid-template-columns: 1fr;
+  }
+  .topbar {
+    padding: 10px 12px;
+  }
+  .nav {
+    gap: 8px;
+  }
+  .cmd-trigger,
+  .nav > a:not(.nav-contact) {
+    display: none;
+  }
+  .nav-contact {
+    padding: 7px 10px;
+    white-space: nowrap;
+  }
+  .theme-toggle {
+    padding: 6px 8px;
+  }
+  .bento-profile {
+    min-height: 128px;
+  }
+  .bento-profile img {
+    width: 104px;
+    height: 104px;
+    flex-basis: 104px;
   }
   .finance-form {
     grid-template-columns: 1fr 1fr;
