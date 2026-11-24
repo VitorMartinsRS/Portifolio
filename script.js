@@ -244,19 +244,22 @@ document.addEventListener('DOMContentLoaded', () => {
     printCmd(`<span style="color:#10b981">&gt; ${cmd}</span>`);
 
     if (cmd === 'help') {
-      printCmd('Comandos: <strong>afinp</strong> (Afinp Web), <strong>renato</strong> (Renato Silva), <strong>alan</strong> (Alan Santos), <strong>projects</strong> (projetos), <strong>skills</strong> (stack), <strong>contact</strong> (contato), <strong>clear</strong>.');
+      printCmd('Comandos: <strong>afinp</strong> (produto financeiro), <strong>comercial</strong> (portfólio comercial), <strong>profissional</strong> (portfólio profissional), <strong>leituras</strong> (filosofia e literatura), <strong>projects</strong> (projetos), <strong>skills</strong> (stack), <strong>contact</strong> (contato), <strong>clear</strong>.');
     } else if (cmd === 'afinp') {
       printCmd('Abrindo <a href="https://vitormartinsrs.github.io/afinp-web/" target="_blank" style="color:#38bdf8">vitormartinsrs.github.io/afinp-web/</a>...');
       window.open('https://vitormartinsrs.github.io/afinp-web/', '_blank', 'noopener,noreferrer');
-    } else if (cmd === 'renato') {
+    } else if (cmd === 'comercial') {
       printCmd('Abrindo <a href="https://renatosilvarep.github.io/Portfoliocomercial/" target="_blank" style="color:#fcd34d">renatosilvarep.github.io/Portfoliocomercial/</a>...');
       window.open('https://renatosilvarep.github.io/Portfoliocomercial/', '_blank', 'noopener,noreferrer');
-    } else if (cmd === 'alan') {
+    } else if (cmd === 'profissional') {
       printCmd('Abrindo <a href="https://alanadsantos.github.io/portifolio/" target="_blank" style="color:#a3cc52">alanadsantos.github.io/portifolio/</a>...');
       window.open('https://alanadsantos.github.io/portifolio/', '_blank', 'noopener,noreferrer');
     } else if (cmd === 'projects') {
       closeCmd();
       document.getElementById('trabalho')?.scrollIntoView({ behavior: 'smooth' });
+    } else if (cmd === 'leituras') {
+      closeCmd();
+      document.getElementById('leituras')?.scrollIntoView({ behavior: 'smooth' });
     } else if (cmd === 'skills') {
       printCmd('Stack: React, HTML5, CSS3, JavaScript, Java (Spring Boot), Python, Supabase, Arduino UNO (C/C++).');
     } else if (cmd === 'contact') {
